@@ -1,9 +1,11 @@
 # NgAdv1
 
 ## TECH STACK
+
 - Angular v17.2.0
 
 ## FEATURES
+
 - Standalone Angular App
 - Routing
   - Lazy loading
@@ -26,7 +28,9 @@
   - Angular Material
   - Bootstrap
 - MockApi: https://dummyjson.com/
+
 ## REFERENCES
+
 - SignalStore: https://ngrx.io/guide/signals/signal-store
 - SignalState: https://ngrx.io/guide/signals/signal-state
 - Angular.io: https://angular.io/
@@ -34,7 +38,9 @@
 - Deferrable Views: https://angular.io/guide/defer
 - RX:
   - https://rxjs.dev/
-  - Operators: 
-    - https://rxjs.dev/guide/operators 
+  - Operators:
+    - https://rxjs.dev/guide/operators
     - https://rxmarbles.com/
 - OptimizedImage: https://angular.io/guide/image-directive
+
+author: ir
