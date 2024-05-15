@@ -1,0 +1,25 @@
+<main class="d-flex flex-column justify-content-between align-items-center h-100 p-3">
+  <div class="navbar d-flex justify-content-between w-100">
+    <div class="navbar-left">
+      <span> <a [routerLink]="'/login'" > Login </a> </span>
+      <span> <a [routerLink]="'/users'"> Users </a> </span>
+    </div>
+
+    <div class="navbar-right">
+      @if (this.dataService.loginState().username) {
+        <span> User: {{this.dataService.loginState().username}} </span>
+        <span (click)="onLogout()" class="pointer"> Logout </span>
+      }
+    </div>
+  </div>
+
+  <!--  content -->
+  <div class="content w-100">
+    <router-outlet/>
+  </div>
+
+  <div class="footer w-100">
+    footer
+  </div>
+</main>
+

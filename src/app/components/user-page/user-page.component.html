@@ -1,0 +1,108 @@
+<h1>Hi👋 {{user.username}}</h1>
+
+<table mat-table [dataSource]="[user]" class="mat-elevation-z8">
+  <!-- Position Column -->
+  <ng-container matColumnDef="firstName">
+    <th mat-header-cell *matHeaderCellDef> First name </th>
+    <td mat-cell *matCellDef="let row" class="pointer">
+      <input matInput id="firstname" type="text" class="w-12rem" [(ngModel)]="row.firstName"/>
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="lastName">
+    <th mat-header-cell *matHeaderCellDef> Lastname </th>
+    <td mat-cell *matCellDef="let row" class="pointer">
+      <input matInput id="lastname" type="text" class="w-12rem" [(ngModel)]="row.lastName"/>
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="age">
+    <th mat-header-cell *matHeaderCellDef> Age </th>
+    <td mat-cell *matCellDef="let row" class="pointer">
+      <input matInput id="age" type="text" class="w-12rem" [(ngModel)]="row.age"/>
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="username">
+    <th mat-header-cell *matHeaderCellDef> User </th>
+    <td mat-cell *matCellDef="let row" class="pointer">
+      <input matInput id="username" type="text" class="w-12rem" [(ngModel)]="row.username"/>
+    </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="email">
+    <th mat-header-cell *matHeaderCellDef> Email </th>
+    <td mat-cell *matCellDef="let row">
+      <input matInput id="email" type="text" class="w-12rem" [(ngModel)]="row.email"/>
+    </td>
+  </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="image">
+    <th mat-header-cell *matHeaderCellDef> Image </th>
+    <td mat-cell *matCellDef="let row">
+      <img src="{{row.image}}" alt="img" height="30px"/>
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="action">
+    <th mat-header-cell *matHeaderCellDef> Action </th>
+    <td mat-cell *matCellDef="let row">
+      <button mat-raised-button (click)="onConfirmEditRow(row)"> Confirm </button>
+      <button mat-raised-button (click)="onDiscardEditRow(row)"> Discard </button>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
+<div style="height: 1000px"></div>
+
+@defer (on viewport) {
+  <div class="d-flex flex-column align-items-center">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>Shiba Inu</mat-card-title>
+        <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+      <mat-card-content>
+        <p>
+          The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+          A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+          bred for hunting.
+          The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+          A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+          bred for hunting.
+          The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+          A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+          bred for hunting.
+          The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+          A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+          bred for hunting.
+          The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+          A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+          bred for hunting.
+          The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+          A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+          bred for hunting.
+          The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+          A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+          bred for hunting.
+          The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+          A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+          bred for hunting.
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button>LIKE</button>
+        <button mat-button>SHARE</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+} @placeholder {
+  <span> Card Shiba </span>
+}

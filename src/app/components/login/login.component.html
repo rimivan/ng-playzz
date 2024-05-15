@@ -1,0 +1,16 @@
+<div class="">
+  <div class="">
+    <label class="w-6rem">Username</label>
+    <input matInput id="username" type="text" class="w-12rem" [(ngModel)]="user"/>
+  </div>
+  <div class="">
+    <label class="">Password</label>
+    <input matInput id="password" type="password" class="w-12rem" [(ngModel)]="pwd"/>
+  </div>
+  <button mat-flat-button color="primary" (click)="onLogin()"> Login </button>
+</div>
+
+
+
+<router-outlet />
+
