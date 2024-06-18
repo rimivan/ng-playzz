@@ -29,6 +29,16 @@
   - Bootstrap
 - MockApi: https://dummyjson.com/
 
+## TODO
+
+- Observable APIs
+  - Get
+  - Post
+  - Put
+  - Operators
+    - TakeUntilDestroyed
+    - ...
+
 ## REFERENCES
 
 - SignalStore: https://ngrx.io/guide/signals/signal-store
